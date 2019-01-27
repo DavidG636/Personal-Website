@@ -1,0 +1,201 @@
+body {
+  font: 20px Montserrat, sans-serif;
+  line-height: 1.8;
+  color: #8c8c8c;
+}
+
+p {
+  font-size: 16px;
+}
+
+.margin {
+  margin-bottom: 45px;
+}
+
+.bg-1 {
+  background-color: #d4d4dc;
+  color: #8c8c8c;
+}
+
+.bg-2 {
+  background-color: #393f4d;
+  color: #8c8c8c;
+}
+
+.bg-3 {
+  background-color: #2f2f2f;
+  color: #8c8c8c;
+}
+
+.bg-4 {
+  background-color: #1d1e22;
+  color: #8c8c8c;
+}
+
+.container-fluid {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.navbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+
+.typewriter>.txt {
+  border-right: 0.2rem solid #777;
+}
+
+.navbar-nav li a:hover {
+  color: #1abc9c !important;
+}
+
+.profilePic {
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.watchLater, .case, .paragraphUtilities, .lowercase, .leapYear, .helloName, .primalityChecker, .paceSeidenbergStemCamp2017 {
+  width: 300px;
+  height: 300px;
+}
+
+.previous, .next {
+  position: absolute;
+  width: 10vw;
+  height: 10vh;
+  top: -100px
+}
+
+.thumb {
+  width: 300px;
+  height: 300px;
+}
+
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hovereffect .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.hovereffect .over {
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+.hovereffect:hover .over {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
+  filter: grayscale(1) blur(3px);
+  -webkit-filter: grayscale(1) blur(3px);
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hovereffect div.tooltip {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  border: 1px solid #fff;
+  margin: 50px 0 0 0;
+  background-color: transparent;
+}
+
+.hovereffect div.tooltip:hover {
+  box-shadow: 0 0 5px #fff;
+}
+
+.hovereffect div.tooltip, .hovereffect h2 {
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.hovereffect:hover div.tooltip, .hovereffect:hover h2 {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.gitPic, .webPic, .filePic {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  cursor:pointer;
+}
+
+.carousel-indicators {
+  bottom: -50px;
+}
+
+.email:hover {
+  text-decoration: underline;
+  cursor: default;
+}
+
+.otherAccountProfilePic {
+  border-radius: 100%;
+}
+
+.otherGithubLink, .otherGithubLink:hover {
+  color: #8c8c8c;
+}

@@ -20,11 +20,22 @@ p {
 .bg-2 {
   background-color: #393f4d;
   color: #8c8c8c;
+  height:100vh;
+}
+
+#vertically-center {
+  margin-top:50vh;
+  font-size: 3.17em;
+}
+
+.i-am {
+  font-size: 3em;
 }
 
 .bg-3 {
   background-color: #2f2f2f;
   color: #8c8c8c;
+  height:100vh;
 }
 
 .bg-4 {

@@ -5,16 +5,6 @@ const http = require('http');
 const app = express();
 var router = express.Router();
 
-
-
-app.listen(3000)
-
-
-
-// app.use(function (req, res, next) {
-//   res.send(home)
-// })
-
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/images'));
 app.use(express.static(__dirname + '/public'));

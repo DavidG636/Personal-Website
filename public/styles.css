@@ -35,12 +35,12 @@ p {
 .bg-3 {
   background-color: #2f2f2f;
   color: #8c8c8c;
-  height:100vh;
 }
 
 .bg-4 {
   background-color: #1d1e22;
   color: #8c8c8c;
+  margin:auto
 }
 
 .container-fluid {
@@ -76,12 +76,10 @@ p {
   height: 300px;
 }
 
-.previous, .next {
-  position: absolute;
-  width: 10vw;
-  height: 10vh;
-  top: -100px
+.projects {
+  margin-bottom: 30px;
 }
+
 
 .thumb {
   width: 300px;
@@ -209,4 +207,8 @@ p {
 
 .otherGithubLink, .otherGithubLink:hover {
   color: #8c8c8c;
+}
+
+.row {
+  margin-top:30px;
 }

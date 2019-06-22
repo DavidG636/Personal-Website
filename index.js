@@ -7,7 +7,9 @@ var router = express.Router();
 
 var port = process.env.PORT || 8080;
 
-app.listen(port)
+app.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
+});
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/images'));

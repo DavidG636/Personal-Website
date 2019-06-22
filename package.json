@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/DavidG636/Personal-Website/issues"
   },
-  "homepage": "https://github.com/DavidG636/Personal-Website#readme"
+  "homepage": "https://github.com/DavidG636/Personal-Website#readme",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "http": "0.0.0",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  }
 }

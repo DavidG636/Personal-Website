@@ -1,0 +1,19 @@
+{
+  "name": "davidgonzalez",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidG636/Personal-Website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidG636/Personal-Website/issues"
+  },
+  "homepage": "https://github.com/DavidG636/Personal-Website#readme"
+}

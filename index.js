@@ -9,7 +9,6 @@ var port = process.env.PORT || 8080;
 
 app.listen(port)
 
-
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/images'));
 app.use(express.static(__dirname + '/public'));

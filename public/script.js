@@ -1,5 +1,7 @@
 $(function() {
-
+  var path = window.location.pathname;
+  path = new String (path);
+  
   $('.gitPicWatchLater').unbind().click(function() {
     window.open('https://github.com/DavidG636/Youtube-Watch-Later-Player', '_blank');
   });
@@ -113,8 +115,10 @@ $(function() {
     }
   }
 
-  const element = $('.typewriter');
-  const words = JSON.parse($(element).attr('data-words'));
-  const wait = $(element).attr('data-wait');
-  var creator = new Typewriter(element, words, wait);
+  if (path =='/WhatAmI') {
+    const element = $('.typewriter');
+    const words = JSON.parse($(element).attr('data-words'));
+    const wait = $(element).attr('data-wait');
+    var creator = new Typewriter(element, words, wait);
+  }
 });

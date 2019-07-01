@@ -1,7 +1,7 @@
 $(function() {
   var path = window.location.pathname;
-  path = new String (path);
-  
+  path = new String(path);
+
   $('.gitPicWatchLater').unbind().click(function() {
     window.open('https://github.com/DavidG636/Youtube-Watch-Later-Player', '_blank');
   });
@@ -111,14 +111,27 @@ $(function() {
         speed = 500;
       }
 
-      setTimeout(() => {this.type()}, speed);
+      setTimeout(() => {
+        this.type()
+      }, speed);
     }
   }
 
-  if (path =='/WhatAmI') {
+  if (path == '/WhatAmI') {
     const element = $('.typewriter');
     const words = JSON.parse($(element).attr('data-words'));
     const wait = $(element).attr('data-wait');
     var creator = new Typewriter(element, words, wait);
   }
+
+  $(".email").hover(
+    function() {
+      $('.envelopeLogo').removeClass( "fa-envelope" );
+      $('.envelopeLogo').addClass('fa-envelope-open');
+    },
+    function() {
+      $('.envelopeLogo').removeClass( "fa-envelope-open" );
+      $('.envelopeLogo').addClass('fa-envelope');
+    }
+  );
 });

@@ -1,57 +1,57 @@
 $(function() {
 
-  $('.gitPicWatchLater').click(function() {
+  $('.gitPicWatchLater').unbind().click(function() {
     window.open('https://github.com/DavidG636/Youtube-Watch-Later-Player', '_blank');
   });
 
-  $('.webPicWatchLater').click(function() {
+  $('.webPicWatchLater').unbind().click(function() {
     window.open('https://davidg636.github.io/Youtube-Watch-Later-Player/', '_blank');
   });
 
-  $('.gitPicCase').click(function() {
+  $('.gitPicCase').unbind().click(function() {
     window.open('https://github.com/DavidG636/Case', '_blank');
   });
 
-  $('.webPicCase').click(function() {
+  $('.webPicCase').unbind().click(function() {
     window.open('https://davidg636.github.io/Case/', '_blank');
   });
 
-  $('.gitPicParagraphUtilities').click(function() {
+  $('.gitPicParagraphUtilities').unbind().click(function() {
     window.open('https://github.com/DavidG636/Paragraph-Utilities', '_blank');
   });
 
-  $('.webPicParagraphUtilities').click(function() {
+  $('.webPicParagraphUtilities').unbind().click(function() {
     window.open('https://davidg636.github.io/Paragraph-Utilities/', '_blank');
   });
-  $('.gitPicLowercase').click(function() {
+  $('.gitPicLowercase').unbind().click(function() {
     window.open('https://github.com/DavidG636/Lowercase', '_blank');
   });
 
-  $('.webPicLowercase').click(function() {
+  $('.webPicLowercase').unbind().click(function() {
     window.open('https://davidg636.github.io/Lowercase/', '_blank');
   });
 
-  $('.gitPicLeapYear').click(function() {
+  $('.gitPicLeapYear').unbind().click(function() {
     window.open('https://github.com/DavidG636/leapYear', '_blank');
   });
 
-  $('.webPicLeapYear').click(function() {
+  $('.webPicLeapYear').unbind().click(function() {
     window.open('https://davidg636.github.io/leapYear/', '_blank');
   });
 
-  $('.gitPicHelloName').click(function() {
+  $('.gitPicHelloName').unbind().click(function() {
     window.open('https://github.com/DavidG636/helloName', '_blank');
   });
 
-  $('.filePicHelloName').click(function() {
+  $('.filePicHelloName').unbind().click(function() {
     window.open('https://github.com/DavidG636/helloName/blob/master/helloName.c', '_blank');
   });
 
-  $('.gitPicPrimalityChecker').click(function() {
+  $('.gitPicPrimalityChecker').unbind().click(function() {
     window.open('https://github.com/DavidG636/Primality-Checker', '_blank');
   });
 
-  $('.webPicPrimalityChecker').click(function() {
+  $('.webPicPrimalityChecker').unbind().click(function() {
     window.open('https://davidg636.github.io/Primality-Checker/', '_blank');
   });
 

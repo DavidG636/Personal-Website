@@ -57,19 +57,19 @@ $(function() {
     window.open('https://davidg636.github.io/Primality-Checker/', '_blank');
   });
 
-  $('.profilePic').click(function() {
+  $('.profilePic').unbind().click(function() {
     window.open('https://github.com/DavidG636', '_blank');
   });
 
-  $('.profileName').click(function() {
+  $('.profileName').unbind().click(function() {
     window.open('https://github.com/DavidG636', '_blank');
   });
 
-  $('.gitPicPaceSeidenbergStemCamp2017').click(function() {
+  $('.gitPicPaceSeidenbergStemCamp2017').unbind().click(function() {
     window.open('https://github.com/DavidG636/Pace-Seidenberg-Stem-Camp-2017', '_blank');
   });
 
-  $('.filePicPaceSeidenbergStemCamp2017').click(function() {
+  $('.filePicPaceSeidenbergStemCamp2017').unbind().click(function() {
     window.open('https://github.com/DavidG636/Pace-Seidenberg-Stem-Camp-2017/blob/master/script.py', '_blank');
   });
 

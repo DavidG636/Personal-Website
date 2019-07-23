@@ -73,6 +73,14 @@ $(function() {
     window.open('https://github.com/DavidG636/Pace-Seidenberg-Stem-Camp-2017/blob/master/script.py', '_blank');
   });
 
+  $('.gitPicTodayIWill').unbind().click(function() {
+    window.open('https://github.com/DavidG636/Today-I-Will', '_blank');
+  });
+
+  $('.webPicTodayIWill').unbind().click(function() {
+    window.open('https://davidg636.github.io/Today-I-Will/', '_blank');
+  });
+
   class Typewriter {
     constructor(element, words, wait = 3000) {
       this.element = element;

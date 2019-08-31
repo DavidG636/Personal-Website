@@ -81,6 +81,22 @@ $(function() {
     window.open('https://davidg636.github.io/Today-I-Will/', '_blank');
   });
 
+  $('.gitPicProjectAutomation').unbind().click(function() {
+    window.open('https://github.com/DavidG636/Project-Automation', '_blank');
+  });
+
+  $('.filePicProjectAutomation').unbind().click(function() {
+    window.open('https://github.com/DavidG636/Project-Automation/blob/master/createProject.bat', '_blank');
+  });
+
+  $('.gitPicComputerMode').unbind().click(function() {
+    window.open('https://github.com/DavidG636/Computer-Mode', '_blank');
+  });
+
+  $('.filePicComputerMode').unbind().click(function() {
+    window.open('https://github.com/DavidG636/Computer-Mode/blob/master/loadPreset.bat', '_blank');
+  });
+
   class Typewriter {
     constructor(element, words, wait = 3000) {
       this.element = element;

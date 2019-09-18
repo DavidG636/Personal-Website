@@ -97,6 +97,14 @@ $(function() {
     window.open('https://github.com/DavidG636/Computer-Mode/blob/master/loadPreset.bat', '_blank');
   });
 
+  $('.gitPicMoodMail').unbind().click(function() {
+    window.open('https://github.com/DavidG636/Mood-Mail', '_blank');
+  });
+
+  $('.webPicMoodMail').unbind().click(function() {
+    window.open('https://mood-mail.herokuapp.com', '_blank');
+  });
+
   class Typewriter {
     constructor(element, words, wait = 3000) {
       this.element = element;

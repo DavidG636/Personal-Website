@@ -23,7 +23,7 @@ $(function() {
   });
 
   $('.webPicParagraphUtilities').unbind().click(function() {
-    window.open('https://davidg636.github.io/Paragraph-Utilities/', '_blank');
+    window.open('https://paragraph-utilities.herokuapp.com', '_blank');
   });
   $('.gitPicLowercase').unbind().click(function() {
     window.open('https://github.com/DavidG636/Lowercase', '_blank');

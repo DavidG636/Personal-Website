@@ -73,6 +73,7 @@ p {
 .profilePic {
   border-radius: 100%;
   cursor: pointer;
+  image-orientation: from-image;
 }
 
 .watchLater, .case, .paragraphUtilities, .lowercase, .leapYear, .helloName, .primalityChecker, .paceSeidenbergStemCamp2017, .todayIWill, .projectAutomation, .computerMode, .moodMail {

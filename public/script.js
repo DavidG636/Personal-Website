@@ -61,10 +61,6 @@ $(function() {
     window.open('https://github.com/DavidG636', '_blank');
   });
 
-  $('.profileName').unbind().click(function() {
-    window.open('https://github.com/DavidG636', '_blank');
-  });
-
   $('.gitPicPaceSeidenbergStemCamp2017').unbind().click(function() {
     window.open('https://github.com/DavidG636/Pace-Seidenberg-Stem-Camp-2017', '_blank');
   });
@@ -103,6 +99,18 @@ $(function() {
 
   $('.webPicMoodMail').unbind().click(function() {
     window.open('https://mood-mail.herokuapp.com', '_blank');
+  });
+
+  $('.linkedInPic').unbind().click(function() {
+    window.open('https://www.linkedin.com/in/david-gonzalez-856093171', '_blank');
+  });
+
+  $('.gitPhotoLink').unbind().click(function() {
+    window.open('https://github.com/DavidG636', '_blank');
+  });
+
+  $('.otherAccountProfilePic').unbind().click(function() {
+    window.open('https://davidg1739.github.io/', '_blank');
   });
 
   class Typewriter {
@@ -156,7 +164,7 @@ $(function() {
     var creator = new Typewriter(element, words, wait);
   }
 
-  $(".email").hover(
+  $(".envelopeLogo").hover(
     function() {
       $('.envelopeLogo').removeClass( "fa-envelope" );
       $('.envelopeLogo').addClass('fa-envelope-open');

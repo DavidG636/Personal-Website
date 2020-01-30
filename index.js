@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
   res.render('pages/about');
 })
 
-app.get('/WhatAmI', function (req, res) {
+app.get('/WhoAmI', function (req, res) {
   res.render('pages/description');
 })
 

@@ -144,6 +144,14 @@ $(function() {
 
       if (!this.isDeleting && this.text === fullTxt) {
         speed = this.wait;
+
+        for (let i = 0; i <= 2; i++) {
+          $(".typewriter>.txt").css("border-right", "none");
+          setTimeout(() => {
+            $(".typewriter>.txt").css("border-right", "0.2rem solid #777");
+          }, 500);
+        }
+
         this.isDeleting = true;
       } else if (this.isDeleting && this.text === '') {
         this.isDeleting = false;
@@ -152,12 +160,12 @@ $(function() {
       }
 
       setTimeout(() => {
-        this.type()
+        this.type();
       }, speed);
     }
   }
 
-  if (path == '/WhatAmI') {
+  if (path == '/WhoAmI') {
     const element = $('.typewriter');
     const words = JSON.parse($(element).attr('data-words'));
     const wait = $(element).attr('data-wait');

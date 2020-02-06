@@ -14,10 +14,6 @@ $(function() {
     window.open('https://github.com/DavidG636/Case', '_blank');
   });
 
-  $('.webPicCase').unbind().click(function() {
-    window.open('https://davidg636.github.io/Case/', '_blank');
-  });
-
   $('.gitPicParagraphUtilities').unbind().click(function() {
     window.open('https://github.com/DavidG636/Paragraph-Utilities', '_blank');
   });
@@ -170,9 +166,7 @@ $(function() {
     const words = JSON.parse($(element).attr('data-words'));
     const wait = $(element).attr('data-wait');
     var creator = new Typewriter(element, words, wait);
-  }
-
-  if (path == '/hstat' || path == "/pace") {
+  } else if (path == '/hstat' || path == "/pace") {
     var acc = document.getElementsByClassName("accordion");
     var i;
 
@@ -191,15 +185,42 @@ $(function() {
         }
       });
     }
+  } else if (path == "/case") {
+    var state;
+    var change;
+    $(".submitText-case").click(function() {
+      state = $('.slider').css('background-color');
+      state = new String(state);
+
+      let textContent = $('#text').val();
+      var changedText;
+
+      if (state == 'rgb(42, 185, 52)') {
+        change = 'capital';
+      } else if (state == "rgb(202, 34, 34)") {
+        change = 'lower';
+      }
+
+      if (change == 'capital') {
+        changedText = textContent.toUpperCase();
+        $('#text').val(changedText)
+
+      } else if (change == 'lower') {
+        changedText = textContent.toLowerCase();
+        $('#text').val(changedText)
+      }
+    });
   }
+
+
 
   $(".envelopeLogo").hover(
     function() {
-      $('.envelopeLogo').removeClass( "fa-envelope" );
+      $('.envelopeLogo').removeClass("fa-envelope");
       $('.envelopeLogo').addClass('fa-envelope-open');
     },
     function() {
-      $('.envelopeLogo').removeClass( "fa-envelope-open" );
+      $('.envelopeLogo').removeClass("fa-envelope-open");
       $('.envelopeLogo').addClass('fa-envelope');
     }
   );

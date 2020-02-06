@@ -37,4 +37,8 @@ app.get('/pace', function (req, res) {
   res.render('pages/pace');
 })
 
+app.get('/case', function (req, res) {
+  res.render('pages/case');
+})
+
 module.exports = router;

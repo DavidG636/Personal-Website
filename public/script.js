@@ -21,6 +21,7 @@ $(function() {
   $('.webPicParagraphUtilities').unbind().click(function() {
     window.open('https://paragraph-utilities.herokuapp.com', '_blank');
   });
+
   $('.gitPicLowercase').unbind().click(function() {
     window.open('https://github.com/DavidG636/Lowercase', '_blank');
   });
@@ -222,6 +223,9 @@ $(function() {
     const urlParams = new URLSearchParams(window.location.search);
     const myParam = urlParams.get('project');
     $(".project-name").html(myParam);
+    $(".project-name").unbind().click(function() {
+      window.open(`https://github.com/DavidG636/${myParam}`, "_blank");
+    });
 
     $.ajax({
       url: `https://api.github.com/repos/DavidG636/${myParam}/commits`,

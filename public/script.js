@@ -109,6 +109,14 @@ $(function() {
     window.open('https://davidg1739.github.io/', '_blank');
   });
 
+  $(".moreInfoPic").unbind().bind("click", function(e) {
+    projectTitle = $(this).data("project");
+    console.log("Test");
+    e.stopImmediatePropagation();
+    acquiredProject = false;
+    window.open(`/Project-Info?project=${projectTitle}`, "_self");
+  })
+
   class Typewriter {
     constructor(element, words, wait = 3000) {
       this.element = element;
@@ -208,6 +216,40 @@ $(function() {
       } else if (change == 'lower') {
         changedText = textContent.toLowerCase();
         $('#text').val(changedText)
+      }
+    });
+  } else if (path == "/Project-Info") {
+    const urlParams = new URLSearchParams(window.location.search);
+    const myParam = urlParams.get('project');
+    $(".project-name").html(myParam);
+
+    $.ajax({
+      url: `https://api.github.com/repos/DavidG636/${myParam}/commits`,
+      type: 'GET',
+      success: function(res) {
+        $(".commit-amount").html(res.length);
+      }
+    });
+    $.ajax({
+      url: `https://api.github.com/repos/DavidG636/${myParam}/forks`,
+      type: 'GET',
+      success: function(res) {
+        $(".fork-amount").html(res.length);
+      }
+    });
+    $.ajax({
+      url: `https://api.github.com/repos/DavidG636/${myParam}/languages`,
+      type: 'GET',
+      success: function(res) {
+        let languages = Object.keys(res);
+        let byteAmounts = Object.values(res);;
+        let totalNumberOfBytes = 0;
+        for (let i = 0; i < languages.length; i++) {
+          $(".language-list").append(`<li>${languages[i]}</li>`)
+          totalNumberOfBytes += byteAmounts[i];
+        }
+
+        $(".project-size").html(totalNumberOfBytes);
       }
     });
   }

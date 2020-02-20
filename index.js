@@ -41,4 +41,8 @@ app.get('/case', function (req, res) {
   res.render('pages/case');
 })
 
+app.get('/Project-Info', function (req, res) {
+  res.render('pages/project-info');
+})
+
 module.exports = router;

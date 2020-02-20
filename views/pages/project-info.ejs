@@ -1,3 +1,4 @@
+<title>David Gonzalez</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -5,21 +6,34 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<!-- <script src='script.js' type="text/javascript"></script> -->
+<script src='script.js' type="text/javascript"></script>
 
-<footer class="container-fluid bg-4 text-center">
-  <p>
-    <img src="linkedIn.png" class="linkedInPic" alt="Linked In Logo">
-    <span>|</span>
-    <a href="mailto:gonzalezdavid636@gmail.com?Subject=Contacting%20From%20Website" target="_top"><i class="fas fa-envelope envelopeLogo"></i></a>
-    <span>|</span>
-    <img class='gitPhotoLink' src="gitPhotoLink.png" alt="">
-    <span>|</span>
-    <span class="tooltipSpecial">
-      <img src="otherAccountProfilePic.png" alt="" class='otherAccountProfilePic'>
-      <span class='tooltiptext'>Click To Visit My High School Website!</span>
-    </span>
-  </p>
+<% include ../partials/navbar %>
 
-  <p class='copyrightStatment'><strong>&#9400; Website Created and Designed By David Gonzalez</strong></p>
-</footer>
+<div class="container-fluid bg-3 text-center" id="project-info">
+  <h1 class="project-info-header">Project Info: <span class="project-name"></span></h1>
+  <table class="project-info-table">
+    <tr>
+      <td>Number Of Commits:</td>
+      <td><span class="commit-amount"></span> commits</td>
+    </tr>
+    <tr>
+      <td>Number Of Forks:</td>
+      <td><span class="fork-amount"></span> forks</td>
+    </tr>
+    <tr>
+      <td>Languages:</td>
+      <td>
+        <ul class="language-list">
+
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Project Size:</td>
+      <td><span class="project-size"></span> bytes</td>
+    </tr>
+  </table>
+</div>
+
+<% include ../partials/footer %>

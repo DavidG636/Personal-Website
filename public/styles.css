@@ -25,7 +25,6 @@ p {
   background-color: #393f4d;
   color: #8c8c8c;
   height:100%;
-  overflow:auto;
 }
 
 #threeSeventeenFont {
@@ -247,11 +246,12 @@ p {
 }
 
 .hstatPhotoDiv {
-  float:left;
+  position: absolute;
 }
 
 .paceDiv {
-  float:right;
+  position: absolute;
+  right:0;
 }
 
 .linkedInPic {

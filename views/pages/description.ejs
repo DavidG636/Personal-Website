@@ -11,17 +11,19 @@
 
 <% include ../partials/navbar %>
 
-<div class="container-fluid bg-2 text-center" id='whoAmI'>
+<div id="bg-2" class="container-fluid text-center" id='whoAmI'>
   <h3 class="margin" id='threeSeventeenFont'>Who Am I?</h3>
   <h4 class='i-am'>I Am <span class='typewriter' data-wait="3000" data-words='["A Developer!", "A Creator!", "An Entrepreneur!"]'></span></h4>
   <br><h5>Education</h5>
-  <div class="hstatPhotoDiv">
-    <h6 class='hstatPhotoHeader'>High School of Telecommunication Arts & Technology (HSTAT)</h6>
-    <a href="/hstat"><img id='hstatPhoto' class='img-responsive' src="yellowjacket.jpg" alt="HSTAT"></a>
-  </div>
-  <div class="paceDiv">
-    <h6>Pace University (Pace)</h6>
-    <a href="/pace"><img id="pacePhoto" class='img-responsive' src="pace.png" alt="PACE"></a>
+  <div class="row">
+    <div class="hstatPhotoDiv col-sm-6">
+      <h6 class='hstatPhotoHeader'>High School of Telecommunication Arts & Technology (HSTAT)</h6>
+      <a href="/hstat"><img id='hstatPhoto' class='img-responsive' src="yellowjacket.jpg" alt="HSTAT"></a>
+    </div>
+    <div class="paceDiv col-sm-6">
+      <h6>Pace University (Pace)</h6>
+      <a href="/pace"><img id="pacePhoto" class='img-responsive' src="pace.png" alt="PACE"></a>
+    </div>
   </div>
 </div>
 

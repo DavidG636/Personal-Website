@@ -14,17 +14,17 @@ p {
   margin-bottom: 45px;
 }
 
-.bg-1 {
+#bg-1 {
   background-color: #d4d4dc;
   color: #8c8c8c;
   width:100%;
   height:auto;
 }
 
-.bg-2 {
+#bg-2 {
   background-color: #393f4d;
   color: #8c8c8c;
-  height:100%;
+  height:auto;
 }
 
 #threeSeventeenFont {
@@ -35,13 +35,13 @@ p {
   font-size: 3em;
 }
 
-.bg-3 {
+#bg-3 {
   background-color: #2f2f2f;
   color: #8c8c8c;
   height:auto;
 }
 
-.bg-4 {
+#bg-4 {
   background-color: #1d1e22;
   color: #8c8c8c;
   margin:auto;
@@ -246,12 +246,13 @@ p {
 }
 
 .hstatPhotoDiv {
-  position: absolute;
+  position: static;
+  width:50vw;
 }
 
 .paceDiv {
-  position: absolute;
-  right:0;
+  position: static;
+  width:50vw;
 }
 
 .linkedInPic {

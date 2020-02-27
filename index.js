@@ -37,12 +37,16 @@ app.get('/pace', function (req, res) {
   res.render('pages/pace');
 })
 
+app.get('/Project-Info', function (req, res) {
+  res.render('pages/project-info');
+})
+
 app.get('/case', function (req, res) {
   res.render('pages/case');
 })
 
-app.get('/Project-Info', function (req, res) {
-  res.render('pages/project-info');
+app.get('/Primality-Checker', function (req, res) {
+  res.render('pages/primality-checker');
 })
 
 module.exports = router;

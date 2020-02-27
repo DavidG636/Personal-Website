@@ -1,9 +1,8 @@
 
-  <title>David Gonzalez - Case</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" type="text/css">
+  <title>David Gonzalez - Primality Checker</title>
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css" type="text/css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
@@ -11,18 +10,22 @@
 
   <% include ../partials/navbar %>
 
-  <div class="case-parent">
-    <h1 id="case-header">Case Changer</h1>
-    <div class="row">
-      <div class="col">
-        <div class="mx-auto w-50 text-center">
-          <div class='case-container'>
-            <textarea id='text' class='mx-auto'></textarea><br>
-            <button class='submitText-case'>Submit</button><br>
-            <label class="switch"><input type="checkbox" id="togBtn"><div class="slider round"></div></label></div>
+  <div class="primalityChecker-body">
+    <h1 class='primalityChecker-heading'>Primality Checker</h1>
+    <div class="primalityCheckerDiv">
+      <div class="row primalityChecker-row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 primalityChecker-column">
+          <textarea class="primalityChecker-textInput"></textarea>
+          <button class='primalityChecker-submit'>Check Primality!</button>
+          <div class="primalityChecker-output">
+            <h1 class='primalityChecker-primeOrNot'></h1>
+            <div id="primalityChecker-myProgress">
+              <div id="primalityChecker-myBar">0%</div>
+            </div>
           </div>
         </div>
       </div>
+    </div>
   </div>
 
   <% include ../partials/footer %>

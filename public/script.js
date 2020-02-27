@@ -46,52 +46,24 @@ $(function() {
     window.open('https://github.com/DavidG636/helloName/blob/master/helloName.c', '_blank');
   });
 
-  $('.gitPicPrimalityChecker').unbind().click(function() {
-    window.open('https://github.com/DavidG636/Primality-Checker', '_blank');
-  });
-
-  $('.webPicPrimalityChecker').unbind().click(function() {
-    window.open('https://davidg636.github.io/Primality-Checker/', '_blank');
-  });
-
   $('.profilePic').unbind().click(function() {
     window.open('https://github.com/DavidG636', '_blank');
-  });
-
-  $('.gitPicPaceSeidenbergStemCamp2017').unbind().click(function() {
-    window.open('https://github.com/DavidG636/Pace-Seidenberg-Stem-Camp-2017', '_blank');
   });
 
   $('.filePicPaceSeidenbergStemCamp2017').unbind().click(function() {
     window.open('https://github.com/DavidG636/Pace-Seidenberg-Stem-Camp-2017/blob/master/script.py', '_blank');
   });
 
-  $('.gitPicTodayIWill').unbind().click(function() {
-    window.open('https://github.com/DavidG636/Today-I-Will', '_blank');
-  });
-
   $('.webPicTodayIWill').unbind().click(function() {
     window.open('https://davidg636.github.io/Today-I-Will/', '_blank');
-  });
-
-  $('.gitPicProjectAutomation').unbind().click(function() {
-    window.open('https://github.com/DavidG636/Project-Automation', '_blank');
   });
 
   $('.filePicProjectAutomation').unbind().click(function() {
     window.open('https://github.com/DavidG636/Project-Automation/blob/master/createProject.bat', '_blank');
   });
 
-  $('.gitPicComputerMode').unbind().click(function() {
-    window.open('https://github.com/DavidG636/Computer-Mode', '_blank');
-  });
-
   $('.filePicComputerMode').unbind().click(function() {
     window.open('https://github.com/DavidG636/Computer-Mode/blob/master/loadPreset.bat', '_blank');
-  });
-
-  $('.gitPicMoodMail').unbind().click(function() {
-    window.open('https://github.com/DavidG636/Mood-Mail', '_blank');
   });
 
   $('.webPicMoodMail').unbind().click(function() {
@@ -219,7 +191,73 @@ $(function() {
         $('#text').val(changedText)
       }
     });
-  } else if (path == "/Project-Info") {
+  }
+  else if(path == "/Primality-Checker") {
+    $(".primalityChecker-textInput").keypress(function(e) {
+
+    if (e.which == 13) {
+      e.preventDefault();
+      move();
+    }
+
+    let letterKeyCodes = [];
+
+    for (i = 48; i < 58; i++) {
+        letterKeyCodes.push(i);
+    }
+
+    if (!(letterKeyCodes.indexOf(e.which)>=0)) {
+        e.preventDefault();
+    }
+  });
+
+  function isPrime(num) {
+    let number = new Number(num);
+    let bool = true;
+    for (var i = 2; i < num; i++) {
+      if ((number % i) == 0) {
+        bool = false;
+      }
+    }
+    return bool;
+  }
+
+
+  function move() {
+    var elem = $("#primalityChecker-myBar");
+    elem.css('display', 'block');
+    var width = 0;
+    var id = setInterval(frame, 20);
+
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        showOutput()
+      } else {
+        width++;
+        let temp = width + '%';
+        $(elem).css('width', temp)
+        $(elem).html(width * 1 + '%');
+      }
+    }
+  }
+
+  $('.primalityChecker-submit').click(function() {
+    $('.primalityChecker-primeOrNot').css('display', 'none');
+    move();
+  });
+
+  function showOutput() {
+    $('#primalityChecker-myBar').css('display', 'none');
+    $('.primalityChecker-primeOrNot').css('display', 'block');
+    if (isPrime($('.primalityChecker-textInput').val())) {
+      $('.primalityChecker-primeOrNot').html('It Is Prime!');
+    } else {
+      $('.primalityChecker-primeOrNot').html('It Is Not Prime!');
+    }
+  }
+  }
+  else if (path == "/Project-Info") {
     const urlParams = new URLSearchParams(window.location.search);
     const myParam = urlParams.get('project');
     $(".project-name").html(myParam);

@@ -74,6 +74,7 @@ p {
   border-radius: 100%;
   cursor: pointer;
   image-orientation: from-image;
+  margin-bottom:5px;
 }
 
 .watchLater, .case, .paragraphUtilities, .lowercase, .leapYear, .helloName, .primalityChecker, .paceSeidenbergStemCamp2017, .todayIWill, .projectAutomation, .computerMode, .moodMail {

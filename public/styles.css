@@ -135,12 +135,20 @@ p {
   background: rgba(0, 0, 0, 0.6);
 }
 
+.hovereffect p {
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  font-size: 8px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
 .hovereffect div.tooltip {
   display: inline-block;
   text-decoration: none;
   padding: 7px 14px;
   border: 1px solid #fff;
-  margin: 50px 0 0 0;
+  margin: 10px 0 0 0;
   background-color: transparent;
 }
 
@@ -148,7 +156,7 @@ p {
   box-shadow: 0 0 5px #fff;
 }
 
-.hovereffect div.tooltip, .hovereffect h2 {
+.hovereffect div.tooltip, .hovereffect h2, .hovereffect p{
   -webkit-transform: scale(0.7);
   -ms-transform: scale(0.7);
   transform: scale(0.7);
@@ -160,7 +168,7 @@ p {
   text-transform: uppercase;
 }
 
-.hovereffect:hover div.tooltip, .hovereffect:hover h2 {
+.hovereffect:hover div.tooltip, .hovereffect:hover h2, .hovereffect:hover p {
   opacity: 1;
   filter: alpha(opacity=100);
   -webkit-transform: scale(1);

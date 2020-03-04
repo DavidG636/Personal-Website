@@ -18,7 +18,7 @@ app.use(express.static(__dirname + '/images'));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
-  res.render('pages/about');
+  res.render('pages/home');
 })
 
 app.get('/WhoAmI', function (req, res) {

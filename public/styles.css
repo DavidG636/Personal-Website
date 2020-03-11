@@ -2,8 +2,8 @@ body {
   font: 20px Montserrat, sans-serif;
   line-height: 1.8;
   color: #8c8c8c;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
 }
 
 p {
@@ -17,14 +17,14 @@ p {
 #bg-1 {
   background-color: #d4d4dc;
   color: #8c8c8c;
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
 }
 
 #bg-2 {
   background-color: #393f4d;
   color: #8c8c8c;
-  height:auto;
+  height: auto;
 }
 
 #threeSeventeenFont {
@@ -38,13 +38,13 @@ p {
 #bg-3 {
   background-color: #2f2f2f;
   color: #8c8c8c;
-  height:auto;
+  height: auto;
 }
 
 #bg-4 {
   background-color: #1d1e22;
   color: #8c8c8c;
-  margin:auto;
+  margin: auto;
 }
 
 .container-fluid {
@@ -74,7 +74,7 @@ p {
   border-radius: 100%;
   cursor: pointer;
   image-orientation: from-image;
-  margin-bottom:5px;
+  margin-bottom: 5px;
 }
 
 .watchLater, .case, .paragraphUtilities, .lowercase, .leapYear, .helloName, .primalityChecker, .paceSeidenbergStemCamp2017, .todayIWill, .projectAutomation, .computerMode, .moodMail {
@@ -156,7 +156,7 @@ p {
   box-shadow: 0 0 5px #fff;
 }
 
-.hovereffect div.tooltip, .hovereffect h2, .hovereffect p{
+.hovereffect div.tooltip, .hovereffect h2, .hovereffect p {
   -webkit-transform: scale(0.7);
   -ms-transform: scale(0.7);
   transform: scale(0.7);
@@ -183,7 +183,7 @@ p {
 }
 
 .tooltipSpecial {
-  position:static;
+  position: static;
   display: inline;
 }
 
@@ -214,7 +214,7 @@ p {
   width: 100px;
   height: 100px;
   border-radius: 100%;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .email:hover {
@@ -227,14 +227,13 @@ p {
 }
 
 .row {
-  margin-top:30px;
+  margin-top: 30px;
 }
 
-
 #hstatPhoto, #pacePhoto {
-  width:300px;
-  height:300px;
-  margin-top:10px;
+  width: 300px;
+  height: 300px;
+  margin-top: 10px;
   border-radius: 11%;
   -webkit-transform: scale(0.7);
   -ms-transform: scale(0.7);
@@ -256,22 +255,22 @@ p {
 
 .hstatPhotoDiv {
   position: static;
-  width:50vw;
+  width: 50vw;
 }
 
 .paceDiv {
   position: static;
-  width:50vw;
+  width: 50vw;
 }
 
 .linkedInPic {
-  width:16px;
-  height:16px;
+  width: 16px;
+  height: 16px;
   cursor: pointer;
 }
 
 .gitPhotoLink, .otherAccountProfilePic {
-  width:20px;
+  width: 20px;
   height: 20px;
   border-radius: 100%;
   cursor: pointer;
@@ -301,6 +300,7 @@ p {
   padding: 0;
   margin: 0;
 }
+
 .accordion li {
   position: relative;
   padding: 0;
@@ -309,24 +309,30 @@ p {
   padding-top: 18px;
   border-top: 1px dotted #dce7eb;
 }
+
 .accordion li:nth-of-type(1) {
   animation-delay: 0.5s;
 }
+
 .accordion li:nth-of-type(2) {
   animation-delay: 0.75s;
 }
+
 .accordion li:nth-of-type(3) {
   animation-delay: 1s;
 }
+
 .accordion li:last-of-type {
   padding-bottom: 0;
 }
+
 .accordion li i {
   position: absolute;
   transform: translate(-6px, 0);
   margin-top: 16px;
   right: 0;
 }
+
 .accordion li i:before, ul li i:after {
   content: "";
   position: absolute;
@@ -334,12 +340,15 @@ p {
   width: 3px;
   height: 9px;
 }
+
 .accordion li i:before {
   transform: translate(-2px, 0) rotate(45deg);
 }
+
 .accordion li i:after {
   transform: translate(2px, 0) rotate(-45deg);
 }
+
 .accordion li input[type=checkbox] {
   position: absolute;
   cursor: pointer;
@@ -348,16 +357,19 @@ p {
   z-index: 1;
   opacity: 0;
 }
-.accordion li input[type=checkbox]:checked ~ p {
+
+.accordion li input[type=checkbox]:checked~p {
   margin-top: 0;
   max-height: 0;
   opacity: 0;
   transform: translate(0, 50%);
 }
-.accordion li input[type=checkbox]:checked ~ i:before {
+
+.accordion li input[type=checkbox]:checked~i:before {
   transform: translate(2px, 0) rotate(45deg);
 }
-.accordion li input[type=checkbox]:checked ~ i:after {
+
+.accordion li input[type=checkbox]:checked~i:after {
   transform: translate(-2px, 0) rotate(-45deg);
 }
 
@@ -367,18 +379,23 @@ p {
     transform-origin: top center;
     transform: rotateX(-90deg);
   }
+
   5% {
     opacity: 1;
   }
+
   80% {
     transform: rotateX(8deg);
   }
+
   83% {
     transform: rotateX(6deg);
   }
+
   92% {
     transform: rotateX(-3deg);
   }
+
   100% {
     transform-origin: top center;
     transform: rotateX(0deg);
@@ -386,14 +403,15 @@ p {
 }
 
 .accordionHeader {
-  color:rgb(250,103,114);
+  color: rgb(250, 103, 114);
 }
+
 .accordionDiv {
-  width:99%;
+  width: 99%;
 }
 
 .hstatHeader, .paceHeader {
-  margin-bottom:15px;
+  margin-bottom: 15px;
 }
 
 #text {
@@ -403,7 +421,7 @@ p {
 }
 
 .submitText-case {
-  width:400px;
+  width: 400px;
 }
 
 .switch {
@@ -413,7 +431,9 @@ p {
   height: 34px;
 }
 
-.switch input {display:none;}
+.switch input {
+  display: none;
+}
 
 .slider {
   position: absolute;
@@ -439,31 +459,29 @@ p {
   transition: .4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #2ab934;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(55px);
   -ms-transform: translateX(55px);
   transform: translateX(55px);
-  content:"A";
+  content: "A";
 }
 
-.on
-{
+.on {
   display: block;
 }
 
-.on, .off
-{
+.on, .off {
   color: white;
   position: absolute;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
   font-size: 10px;
@@ -479,35 +497,35 @@ input:checked + .slider:before {
 }
 
 #case-header {
-  text-align:center;
+  text-align: center;
 }
 
-.case-parent{
+.case-parent {
   width: 100%;
   height: 100%;
   background-color: lightblue;
 }
 
 .project-info-table {
-  width:100%;
-  height:50%;
+  width: 100%;
+  height: 50%;
 }
 
 .project-info-table, .project-info-table tr, .project-info-table tr td {
   border: 1px solid red;
-  text-align:center;
+  text-align: center;
 }
 
 .project-info-header {
-  margin-bottom:25px;
+  margin-bottom: 25px;
 }
 
 .project-name {
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .project-name:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .primalityChecker-body {
@@ -517,7 +535,7 @@ input:checked + .slider:before {
 }
 
 .primalityChecker-heading {
-  padding-top:25px;
+  padding-top: 25px;
 }
 
 .primalityChecker-heading, .primalityChecker-primeOrNot {
@@ -525,19 +543,19 @@ input:checked + .slider:before {
 }
 
 .primalityCheckerDiv {
-  width:100vw;
+  width: 100vw;
 }
 
 .primalityChecker-column .primalityChecker-textInput, .primalityChecker-column .primalityChecker-submit, .primalityChecker-column .primalityChecker-output {
-  display:block;
-  margin-left:auto;
-  margin-right:auto;
-  width:350px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 350px;
   resize: none;
 }
 
 .primalityChecker-row {
-  margin-top:100px;
+  margin-top: 100px;
 }
 
 #primalityChecker-myProgress {

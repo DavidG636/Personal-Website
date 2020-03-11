@@ -77,7 +77,7 @@ p {
   margin-bottom: 5px;
 }
 
-.watchLater, .case, .paragraphUtilities, .lowercase, .leapYear, .helloName, .primalityChecker, .paceSeidenbergStemCamp2017, .todayIWill, .projectAutomation, .computerMode, .moodMail {
+.watchLater, .case, .paragraphUtilities-depreceated, .paragraphUtilities, .lowercase, .leapYear, .helloName, .primalityChecker, .paceSeidenbergStemCamp2017, .todayIWill, .projectAutomation, .computerMode, .moodMail {
   width: 300px;
   height: 300px;
 }

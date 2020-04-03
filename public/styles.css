@@ -32,29 +32,33 @@ p {
   height: 100%;
 }
 
+#bg-2.hstat-desc {
+  height:110%;
+}
+
 @media only screen and (max-width : 992px) {
   #bg-1 {
     height:122%;  // adjust this to whatever size you think your content will stretch to there is no golden rule saying it has to be 100% only.
   }
-  #bg-2 {
+  #bg-2.desc, #bg-2.hstat-desc {
     height:135%;  // adjust this to whatever size you think your content will stretch to there is no golden rule saying it has to be 100% only.
   }
 
-  #bg-2, #bg-4 {
+  #bg-2.desc, #nav-before, #bg-2.desc ~ #bg-4 {
     width: 130%;
   }
 }
 
-@media only screen and (max-width : 530px) {
+@media only screen and (max-width : 768px) {
   #bg-1 {
     height:135%;  // adjust this to whatever size you think your content will stretch to there is no golden rule saying it has to be 100% only.
   }
 
-  #bg-2 {
+  #bg-2.desc {
     height:165%;  // adjust this to whatever size you think your content will stretch to there is no golden rule saying it has to be 100% only.
   }
 
-  #bg-2, #bg-4 {
+  #bg-2.desc, #nav-before, #bg-2.desc ~ #bg-4 {
     width: 130%;
   }
 }

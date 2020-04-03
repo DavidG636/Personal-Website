@@ -131,6 +131,7 @@ $(function() {
   }
 
   if (path == '/WhoAmI') {
+    $("#bg-2.desc").prev("nav").attr('id', 'nav-before');
     const element = $('.typewriter');
     const words = JSON.parse($(element).attr('data-words'));
     const wait = $(element).attr('data-wait');

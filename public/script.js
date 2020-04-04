@@ -137,21 +137,16 @@ $(function() {
     const wait = $(element).attr('data-wait');
     var creator = new Typewriter(element, words, wait);
   } else if (path == '/hstat' || path == "/pace") {
-    var acc = document.getElementsByClassName("accordion");
-    var i;
+    var acc = $(".accordion");
 
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-        /* Toggle between adding and removing the "active" class,
-        to highlight the button that controls the panel */
-        this.classList.toggle("active");
-
-        /* Toggle between hiding and showing the active panel */
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-          panel.style.display = "none";
+    for (let i = 0; i < acc.length; i++) {
+      $(acc).click(function() {
+        $(this).toggleClass("active");
+        let panel = $(this).next();
+        if ($(panel).css('display') === "block") {
+          $(panel).css('display' ,'none');
         } else {
-          panel.style.display = "block";
+          $(panel).css('display' ,'block');
         }
       });
     }

@@ -131,25 +131,11 @@ $(function() {
   }
 
   if (path == '/WhoAmI') {
-    $("#bg-2.desc").prev("nav").attr('id', 'nav-before');
     const element = $('.typewriter');
     const words = JSON.parse($(element).attr('data-words'));
     const wait = $(element).attr('data-wait');
     var creator = new Typewriter(element, words, wait);
   } else if (path == '/hstat' || path == "/pace") {
-    var acc = $(".accordion");
-
-    for (let i = 0; i < acc.length; i++) {
-      $(acc).click(function() {
-        $(this).toggleClass("active");
-        let panel = $(this).next();
-        if ($(panel).css('display') === "block") {
-          $(panel).css('display' ,'none');
-        } else {
-          $(panel).css('display' ,'block');
-        }
-      });
-    }
   } else if (path == "/case") {
     var state;
     var change;

@@ -42,10 +42,6 @@ $(function() {
     window.open('https://github.com/DavidG636/helloName/blob/master/helloName.c', '_blank');
   });
 
-  $('.profilePic').unbind().click(function() {
-    window.open('https://github.com/DavidG636', '_blank');
-  });
-
   $('.filePicPaceSeidenbergStemCamp2017').unbind().click(function() {
     window.open('https://github.com/DavidG636/Pace-Seidenberg-Stem-Camp-2017/blob/master/script.py', '_blank');
   });

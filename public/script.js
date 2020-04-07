@@ -233,35 +233,35 @@ $(function() {
       window.open(`https://github.com/DavidG636/${myParam}`, "_blank");
     });
 
-    // $.ajax({
-    //   url: `https://api.github.com/repos/DavidG636/${myParam}/commits`,
-    //   type: 'GET',
-    //   success: function(res) {
-    //     $(".commit-amount").html(res.length);
-    //   }
-    // });
-    // $.ajax({
-    //   url: `https://api.github.com/repos/DavidG636/${myParam}/forks`,
-    //   type: 'GET',
-    //   success: function(res) {
-    //     $(".fork-amount").html(res.length);
-    //   }
-    // });
-    // $.ajax({
-    //   url: `https://api.github.com/repos/DavidG636/${myParam}/languages`,
-    //   type: 'GET',
-    //   success: function(res) {
-    //     let languages = Object.keys(res);
-    //     let byteAmounts = Object.values(res);;
-    //     let totalNumberOfBytes = 0;
-    //     for (let i = 0; i < languages.length; i++) {
-    //       $(".language-list").append(`<li>${languages[i]}</li>`)
-    //       totalNumberOfBytes += byteAmounts[i];
-    //     }
-    //
-    //     $(".project-size").html(totalNumberOfBytes);
-    //   }
-    // });
+    $.ajax({
+      url: `https://api.github.com/repos/DavidG636/${myParam}/commits`,
+      type: 'GET',
+      success: function(res) {
+        $(".commit-amount").html(res.length);
+      }
+    });
+    $.ajax({
+      url: `https://api.github.com/repos/DavidG636/${myParam}/forks`,
+      type: 'GET',
+      success: function(res) {
+        $(".fork-amount").html(res.length);
+      }
+    });
+    $.ajax({
+      url: `https://api.github.com/repos/DavidG636/${myParam}/languages`,
+      type: 'GET',
+      success: function(res) {
+        let languages = Object.keys(res);
+        let byteAmounts = Object.values(res);;
+        let totalNumberOfBytes = 0;
+        for (let i = 0; i < languages.length; i++) {
+          $(".language-list").append(`<li>${languages[i]}</li>`)
+          totalNumberOfBytes += byteAmounts[i];
+        }
+
+        $(".project-size").html(totalNumberOfBytes);
+      }
+    });
 
     if (myParam == "Paragraph-Utilities") {
       console.log("test");

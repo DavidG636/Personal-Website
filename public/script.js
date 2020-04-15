@@ -18,10 +18,6 @@ $(function() {
     window.open('https://github.com/DavidG636/Paragraph-Utilities', '_blank');
   });
 
-  $('.webPicParagraphUtilities').unbind().click(function() {
-    window.open('https://paragraph-utilities.herokuapp.com', '_blank');
-  });
-
   $('.gitPicLowercase').unbind().click(function() {
     window.open('https://github.com/DavidG636/Lowercase', '_blank');
   });
@@ -131,15 +127,99 @@ $(function() {
     const words = JSON.parse($(element).attr('data-words'));
     const wait = $(element).attr('data-wait');
     var creator = new Typewriter(element, words, wait);
-  } else if (path == '/hstat' || path == "/pace") {
-  } else if (path == "/case") {
+  } else if (path == '/ParagraphUtilities/Paragraph-Info') {
+    var charsCheck = /^[A-Za-z1-99999]+$/;
+    var prepositions = new Array("a", "abaft", "aboard", "about", "above", "absent", "across", "afore", "after", "against", "along", "alongside", "amid", "amidst", "among", "amongst", "an", "apropos", "apud", "around", "as", "aside", "astride", "at", "athwart", "atop", "barring", "before", "behind", "below", "beneath", "beside", "besides", "between", "beyond", "but", "by", "circa", "concerning", "despite", "down", "during", "except", "excluding", "failing", "following", "for", "from", "given", "in", "including", "inside", "into", "lest", "like", "mid", "midst", "minus", "modulo", "near", "next", "notwithstanding", "of", "off", "on", "onto", "opposite", "out", "outside", "over", "pace", "past", "per", "plus", "pro", "qua", "regarding", "round", "sans", "save", "since", "than", "through", "throughout", "till", "times", "to", "toward", "towards", "under", "underneath", "unlike", "until", "unto", "up", "upon", "versus", "vs.", "via", "vice", "with", "within", "without", "worth", "according", "ahead", "apart", "regards", "back", "because", "close", "due", "far", "instead", "left", "owing", "prior", "pursuant", "rather", "regardless", "right", "subsequent", "thanks", "that", "where", "long",  "opposed",  "soon",  "well");
+    var words;
+    var numOfWords = 0;
+    var sentenceCount = 0;
+    var punctuationCount = 0;
+    var punctuation = ['?', '.', '!', ',', ';', ':', '"', "'", '-'];
+    var punctuationLength = punctuation.length;
+    var prepositionCount = 0;
+
+      function getUserInput() {
+          let userInput = $('.para-paragraphUtilities').val();
+          userInput = userInput.toString();
+          return userInput;
+      }
+
+      $('.eraseBtn-paragraphUtilities').click(function() {
+          $('.para-paragraphUtilities').val('');
+          $('.para-paragraphUtilities').keyup();
+      });
+
+      $('.printBtn-paragraphUtilities').click(function() {
+          window.print();
+      });
+
+      $('.para-paragraphUtilities').keyup(function() {
+          var userInput = getUserInput();
+          var charCountWithWhitespace = 0;
+          var charCountWithoutWhitespace = userInput.length;
+          prepositionCount = 0;
+          sentenceCount = 0;
+          punctuationCount = 0;
+
+          if (userInput[0] == undefined) {
+            sentenceCount = 0;
+            punctuationCount = 0;
+            charCountWithWhitespace = 0;
+            charCountWithoutWhitespace = 0;
+            prepositionCount = 0;
+            numOfWords = 0;
+          }
+          else if (userInput[0].match(charsCheck) || userInput[1].match(charsCheck)) {
+              console.log(charCountWithoutWhitespace);
+              for (let i = 0; i <= charCountWithoutWhitespace; i++) {
+                  if (userInput[i] == '.' || userInput[i] == '!' || userInput[i] == '?') {
+                      sentenceCount += 1;
+                      console.log(sentenceCount);
+                  }
+
+                  for (let a = 0; a < punctuationLength; a++) {
+                      if (userInput[i] == punctuation[a]) {
+                          punctuationCount += 1;
+                      }
+                  }
+              }
+
+              $('.sentenceNum-paragraphUtilities').html(sentenceCount);
+              userInput = userInput.toLowerCase();
+              words = userInput.split(' ');
+
+              numOfWords = userInput.split(' ').length;
+
+              for (let b = 0; b <= numOfWords; b++) {
+                  for (let r = 0; r < prepositions.length; r++) {
+                      if (words[b] == prepositions[r]) {
+                          prepositionCount += 1;
+                      }
+                  }
+              }
+              let numOfSpaces = 0;
+              for (let j = 0; j <= charCountWithoutWhitespace; j++) {
+                  if (userInput[j] == " ") {
+                      numOfSpaces += 1;
+                  }
+              }
+              charCountWithoutWhitespace = (charCountWithoutWhitespace - numOfSpaces);
+              charCountWithWhitespace = (charCountWithoutWhitespace + numOfSpaces);
+          }
+          $('#wordCount-paragraphUtilities').html(numOfWords);
+          $('#characterCountWithWhitespace-paragraphUtilities').html(charCountWithWhitespace);
+          $('#punctutationMarks-paragraphUtilities').html(punctuationCount);
+          $('#characterCountWithoutWhitespace-paragraphUtilities').html(charCountWithoutWhitespace);
+          $('#preposition-paragraphUtilities').html(prepositionCount);
+      });
+  } else if (path == "/ParagraphUtilities/Case") {
     var state;
     var change;
-    $(".submitText-case").click(function() {
-      state = $('.slider').css('background-color');
+    $(".submitText-paragraphUtilities").click(function() {
+      state = $('.slider-paragraphUtilities').css('background-color');
       state = new String(state);
 
-      let textContent = $('#text').val();
+      let textContent = $('#text-paragraphUtilities').val();
       var changedText;
 
       if (state == 'rgb(42, 185, 52)') {
@@ -150,11 +230,11 @@ $(function() {
 
       if (change == 'capital') {
         changedText = textContent.toUpperCase();
-        $('#text').val(changedText)
+        $('#text-paragraphUtilities').val(changedText)
 
       } else if (change == 'lower') {
         changedText = textContent.toLowerCase();
-        $('#text').val(changedText)
+        $('#text-paragraphUtilities').val(changedText)
       }
     });
   } else if (path == "/Primality-Checker") {

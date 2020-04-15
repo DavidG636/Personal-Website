@@ -65,7 +65,7 @@ p {
   padding-bottom: 70px;
 }
 
-.navbar {
+#main-nav {
   padding-top: 15px;
   padding-bottom: 15px;
   border: 0;
@@ -79,7 +79,7 @@ p {
   border-right: 0.2rem solid #777;
 }
 
-.navbar-nav li a:hover {
+#main-nav .navbarNavDropdown .navbar-nav li a:hover {
   color: #1abc9c !important;
 }
 
@@ -239,7 +239,7 @@ p {
   color: #8c8c8c;
 }
 
-.row {
+.row:not(.paragraphInfoRow) {
   margin-top: 30px;
 }
 
@@ -454,4 +454,175 @@ input:checked+.slider:before {
 #school-div {
   width: 100%;
   height:100%;
+}
+
+.pageHeader-paragraphUtilities {
+  margin: auto;
+  text-align: center;
+}
+
+.case-parent, .paragraphInfoContainer-paragraphUtilities, .paragraphUtilitiesHomePageContainer-paragraphUtilities {
+  background-image: url("looseleaf.jpg");
+  background-repeat: round;
+  background-size: contain;
+}
+
+.paraCont-paragraphUtilities {
+  margin-top: 100px;
+}
+
+.para-paragraphUtilities {
+  display: block;
+  width: 760px;
+  height: 380px;
+  margin: auto;
+  border: 5px solid #f46242;
+  resize: none;
+  background-color: #bc897e;
+}
+
+.paraCont-paragraphUtilities textarea,
+.paraCont-paragraphUtilities textarea::-webkit-input-placeholder {
+  font-size: 20px;
+}
+
+ .submitText-paragraphUtilities {
+  display: block;
+  background-color: #e7e7e7;
+  border-color: #5c616d;
+}
+
+#numOfSentences-paragraphUtilities {
+  display: block;
+  text-align: center;
+}
+
+#otherInfo-paragraphUtilities {
+  display: block;
+  border: 5px solid #f46242;
+}
+
+.wgCol {
+  background-color: #b7a8a5;
+  border: 1px solid #ddd;
+}
+
+.lgCol {
+  background-color: lightgrey;
+  border: 1px solid #ddd;
+}
+
+.paragraphInfoContainer-paragraphUtilities p, .paragraphUtilitiesHomePageContainer-paragraphUtilities p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#utilButton-paragraphUtilities {
+  border-radius: 100%;
+  width:100px;
+  height:100px;
+}
+
+.eraseBtn-paragraphUtilities {
+  text-align: center;
+  background-color: #e7e7e7;
+  border-color: #5c616d;
+}
+
+.eraserPic-paragraphUtilities {
+  width: 82px;
+  height:82px;
+}
+
+.printBtn-paragraphUtilities {
+  background-color: #e7e7e7;
+  border-color: #5c616d;
+}
+
+
+#utilButtons-paragraphUtilities {
+  margin-top: 5px;
+  margin-right:auto;
+  margin-left: auto;
+}
+
+#text-paragraphUtilities {
+  width: 400px;
+  height: 200px;
+  resize: none;
+}
+
+.submitText-paragraphUtilities {
+  width:400px;
+}
+
+.switch-paragraphUtilities {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 34px;
+}
+
+.switch-paragraphUtilities input {display:none;}
+
+.slider-paragraphUtilities {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ca2222;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider-paragraphUtilities:before {
+  position: absolute;
+  content: "a";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider-paragraphUtilities {
+  background-color: #2ab934;
+}
+
+input:focus + .slider-paragraphUtilities {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider-paragraphUtilities:before {
+  -webkit-transform: translateX(55px);
+  -ms-transform: translateX(55px);
+  transform: translateX(55px);
+  content:"A";
+}
+
+.slider-paragraphUtilities.round {
+  border-radius: 14px;
+}
+
+.slider-paragraphUtilities.round:before {
+  border-radius: 50%;
+}
+
+#home-div-paragraphUtilities, #home-div-paragraphUtilities p {
+  height:inherit;
+  font-family: 'Indie Flower', cursive;
+  font-size: 20pt !important;
+}
+
+#home-div-paragraphUtilities p:nth-of-type(1) {
+  margin-bottom: 0px;
+  padding: 20vh 0 10vh;
+}
+
+.pageGif-paragraphUtilities {
+  border: 2px solid black;
 }

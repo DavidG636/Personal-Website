@@ -41,12 +41,20 @@ app.get('/Project-Info', function (req, res) {
   res.render('pages/project-info');
 })
 
-app.get('/case', function (req, res) {
+app.get('/Primality-Checker', function (req, res) {
+  res.render('pages/primality-checker');
+})
+
+app.get('/ParagraphUtilities', function (req, res) {
+  res.render('pages/paragraphUtilitiesHomePage');
+})
+
+app.get('/ParagraphUtilities/Case', function (req, res) {
   res.render('pages/case');
 })
 
-app.get('/Primality-Checker', function (req, res) {
-  res.render('pages/primality-checker');
+app.get('/ParagraphUtilities/Paragraph-Info', function (req, res) {
+  res.render('pages/paragraphInfo');
 })
 
 module.exports = router;

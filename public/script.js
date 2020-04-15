@@ -1,9 +1,4 @@
 $(function() {
-  var infolinks_pid = 3214564;
-  var infolinks_wsid = 1;
-  var infolinksScript = document.createElement('script');
-  infolinksScript.setAttribute('src','//resources.infolinks.com/js/infolinks_main.js');
-  document.body.appendChild(infolinksScript);
   var path = window.location.pathname;
   path = new String(path);
 

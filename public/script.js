@@ -2,14 +2,6 @@ $(function() {
   var path = window.location.pathname;
   path = new String(path);
 
-  $('.gitPicWatchLater').unbind().click(function() {
-    window.open('https://github.com/DavidG636/Youtube-Watch-Later-Player', '_blank');
-  });
-
-  $('.webPicWatchLater').unbind().click(function() {
-    window.open('https://davidg636.github.io/Youtube-Watch-Later-Player/', '_blank');
-  });
-
   $('.gitPicCase').unbind().click(function() {
     window.open('https://github.com/DavidG636/Case', '_blank');
   });
@@ -339,47 +331,52 @@ $(function() {
       }
     });
 
-    if (myParam == "Paragraph-Utilities") {
-      console.log("test");
-      $(".project-info").append(
-        `<h3 style="margin-top:10px;">Project Created From:</h3>
-        <div class="row">
-        <div class="col-sm-6">
-          <div class="case">
-            <div class="hovereffect">
-              <img class='img-responsive over thumb' src="caseThumb.PNG" alt="caseThumb">
-              <div class="overlay">
-                <h2>Case</h2>
-                <p>A website where one can change text from uppercase to lowercase and vice-versa.</p>
-                <div class="tooltip"><img class='moreInfoPic' data-project='Case' src="moreInfo.png" alt="">
-                  <span class="tooltiptext">Click for more info!</span>
-                </div>
-
-                <div class="tooltip"><a href="/case"><img class='webPic webPicCase' src="web.png" alt=""></a>
-                  <span class="tooltiptext">Click to go to the website!</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="paragraphUtilities-depreceated">
-            <div class="hovereffect">
-              <img class='img-responsive over thumb' src="paragraphUtilitiesDepreceatedThumb.PNG" alt="filePicParagraphUtilitiesDepreceatedThumb">
-              <div class="overlay">
-                <h2>Paragraph Utilities Depreceated</h2>
-                <p>This website allows for users to find out information about their writing such as number of punctuation marks, sentences, and prepositions.</p>
-                <div class="tooltip"><img class='filePic filePicParagraphUtilitiesDepreceated' src="file.png" alt="">
-                  <span class="tooltiptext">Click to see the files!</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>`
-      );
-    }
-    else if (myParam == "Case") {
+    //   var paraProjectsAppended = false
+    //
+    // if (myParam == "Paragraph-Utilities") {
+    //   if (paraProjectsAppended == false) {
+    //     console.log("test");
+    //     $(".project-info").append(
+    //       `<h3 style="margin-top:10px;">Project Created From:</h3>
+    //       <div class="row">
+    //       <div class="col-sm-6">
+    //         <div class="case">
+    //           <div class="hovereffect">
+    //             <img class='img-responsive over thumb' src="caseThumb.PNG" alt="caseThumb">
+    //             <div class="overlay">
+    //               <h2>Case</h2>
+    //               <p>A website where one can change text from uppercase to lowercase and vice-versa.</p>
+    //               <div class="tooltip"><img class='moreInfoPic' data-project='Case' src="moreInfo.png" alt="">
+    //                 <span class="tooltiptext">Click for more info!</span>
+    //               </div>
+    //
+    //               <div class="tooltip"><a href="/case"><img class='webPic webPicCase' src="web.png" alt=""></a>
+    //                 <span class="tooltiptext">Click to go to the website!</span>
+    //               </div>
+    //             </div>
+    //           </div>
+    //         </div>
+    //       </div>
+    //       <div class="col-sm-6">
+    //         <div class="paragraphUtilities-depreceated">
+    //           <div class="hovereffect">
+    //             <img class='img-responsive over thumb' src="paragraphUtilitiesDepreceatedThumb.PNG" alt="filePicParagraphUtilitiesDepreceatedThumb">
+    //             <div class="overlay">
+    //               <h2>Paragraph Utilities Depreceated</h2>
+    //               <p>This website allows for users to find out information about their writing such as number of punctuation marks, sentences, and prepositions.</p>
+    //               <div class="tooltip"><img class='filePic filePicParagraphUtilitiesDepreceated' src="file.png" alt="">
+    //                 <span class="tooltiptext">Click to see the files!</span>
+    //               </div>
+    //             </div>
+    //           </div>
+    //         </div>
+    //       </div>
+    //       </div>`
+    //     );
+    //     paraProjectsAppended = true;
+    //   }
+    // }
+    if (myParam == "Case") {
       $(".project-info").append(
         `<h3 style="margin-top:10px;">Project Created From:</h3>
         <div class="row">

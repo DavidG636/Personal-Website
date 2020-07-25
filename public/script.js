@@ -378,29 +378,31 @@ $(function() {
       }
     }
     if (myParam == "Case") {
-      $(".project-info").append(
-        `<h3 style="margin-top:10px;">Project Created From:</h3>
-        <div class="row">
-        <div class="col-sm-12">
-        <div class="lowercase">
-          <div class="hovereffect">
-            <img class='img-responsive over thumb' src="lowercaseThumb.PNG" alt="lowercaseThumb">
-            <div class="overlay">
-              <h2>Lowercase</h2>
-              <p>This website makes anything you type in change to lowercase. This is useful for the people who turn on caps lock to capitalize the first word of a sentence and forget to turn it off.</p>
-              <div class="tooltip"><img class='moreInfoPic' data-project='Lowercase' src="moreInfo.png" alt="">
-                <span class="tooltiptext">Click for more info!</span>
-              </div>
+      if ($(".webPicLowercase").length != 1) {
+        $(".project-info").append(
+          `<h3 style="margin-top:10px;">Project Created From:</h3>
+          <div class="row">
+          <div class="col-sm-12">
+          <div class="lowercase">
+            <div class="hovereffect">
+              <img class='img-responsive over thumb' src="lowercaseThumb.PNG" alt="lowercaseThumb">
+              <div class="overlay">
+                <h2>Lowercase</h2>
+                <p>This website makes anything you type in change to lowercase. This is useful for the people who turn on caps lock to capitalize the first word of a sentence and forget to turn it off.</p>
+                <div class="tooltip"><img class='moreInfoPic' data-project='Lowercase' src="moreInfo.png" alt="">
+                  <span class="tooltiptext">Click for more info!</span>
+                </div>
 
-              <div class="tooltip"><img class='webPic webPicLowercase' src="web.png" alt="">
-                <span class="tooltiptext">Click to go to the website!</span>
+                <div class="tooltip"><img class='webPic webPicLowercase' src="web.png" alt="">
+                  <span class="tooltiptext">Click to go to the website!</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        </div>
-        </div>`
-      );
+          </div>
+          </div>`
+        );
+      }
     }
   }
 

@@ -632,3 +632,11 @@ input:checked + .slider-paragraphUtilities:before {
 .pageGif-paragraphUtilities {
   border: 2px solid black;
 }
+
+.contactLink {
+  cursor: pointer;
+}
+
+.contact-form {
+  margin-top: 15px;
+}

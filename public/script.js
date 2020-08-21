@@ -59,7 +59,17 @@ $(function() {
   });
 
   $('.otherAccountProfilePic').unbind().click(function() {
-    window.open('https://davidg1739.github.io/', '_blank');
+    window.open('https://davidg1739.github.io/', '_parent ');
+  });
+
+  $(".contactLink").hover(() => {
+    // Mouse Enter
+    $(".contactLink").removeClass("fa-envelope");
+    $(".contactLink").addClass("fa-envelope-open");
+  }, () => {
+    // Mouse Leave
+    $(".contactLink").removeClass("fa-envelope-open");
+    $(".contactLink").addClass("fa-envelope");
   });
 
   class Typewriter {

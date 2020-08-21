@@ -41,6 +41,10 @@ app.get('/Project-Info', function (req, res) {
   res.render('pages/project-info');
 })
 
+app.get('/contact', function (req, res) {
+  res.render('pages/contact');
+})
+
 app.get('/Primality-Checker', function (req, res) {
   res.render('pages/primality-checker');
 })
@@ -57,8 +61,5 @@ app.get('/ParagraphUtilities/Paragraph-Info', function (req, res) {
   res.render('pages/paragraphInfo');
 })
 
-app.get('/contact', function (req, res) {
-  res.render('pages/contact');
-})
 
 module.exports = router;

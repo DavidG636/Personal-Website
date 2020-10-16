@@ -17,6 +17,10 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/images'));
 app.use(express.static(__dirname + '/public'));
 
+const bodyParser = require('body-parser');
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+
 app.get('/', function (req, res) {
   res.render('pages/home');
 })
@@ -61,6 +65,11 @@ app.get('/ParagraphUtilities/Paragraph-Info', function (req, res) {
 app.get('/contact', function (req, res) {
   res.render('pages/contact')
 })
+
+app.post('/contact', function(req, res) {
+  console.log(req.body);
+  res.render()
+});
 
 
 module.exports = router;

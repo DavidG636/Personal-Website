@@ -12,22 +12,35 @@
 <% include ../partials/navbar %>
 <div id="bg-1" style="height: 100%;" class="container-fluid text-center">
   <h1>Contact Me</h1>
-  <form class="contact-form">
-    <div class="form-group">
-      <label for="name-contact">Name:</label><br>
-      <input type="text" name="name-contact" placeholder="John Doe" required><br>
-        <small class="form-text text-muted">Your name will not be shared with anyone else.</small>
-    </div>
-    <div class="form-group">
-      <label for="email-contact">Email Address:</label><br>
-      <input type="text" name="email-contact" placeholder="example@example.com" required><br>
-      <small class="form-text text-muted">Your email will not be shared with anyone else.</small>
-    </div>
-    <div class="form-group">
-      <label for="details-contact">Details:</label><br>
-      <input type="text" name="detail-contact" placeholder="2-3 Sentences" required>
-    </div>
-  </form>
+  <div class="contactFormDiv">
+    <form autocomplete="off" method="post" action="/contact" class="contact-form">
+      <div class="contact-form-rows">
+        <div class="row">
+          <div class="col-md-4 offset-md-2 col-sm-6 col-xs-12">
+            <div class="form-group">
+              <div class="form-group">
+                <input autocomplete="off" type="text" name="name" placeholder="Name" required><br>
+              </div>
+              <div class="form-group">
+                <input autocomplete="off" type="text" name="email" placeholder="Email Address" required><br>
+              </div>
+              <div class="form-group">
+                <input autocomplete="off" type="text" name="subject" placeholder="Subject" required>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="form-group contact-msg">
+              <input autocomplete="off" type="text" name="message" placeholder="Message" required>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <input autocomplete="off" class="contact-submit" type="submit" name="Submit" value="Submit">
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
 
 <% include ../partials/footer %>

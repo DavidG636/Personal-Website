@@ -15,8 +15,8 @@ p {
 }
 
 #bg-1 {
-  background-color: #d4d4dc;
-  color: #8c8c8c;
+  background-color: #F1E9DA;
+  color: black;
   width: 100%;
   height: auto;
 }
@@ -26,18 +26,18 @@ p {
 }
 
 #bg-2 {
-  background-color: #393f4d;
-  color: #8c8c8c;
+  background-color: #546A7B;
+  color: black;
   width: 100%;
   height: auto;
 }
 
 #bg-2 #accordion .card {
-  background-color: #393f4d;
+  background-color: #546A7B;
 }
 
 .collapsed, .collapsed:hover, .card-header .btn-link  {
-  color: red;
+  color: black;
 }
 
 #threeSeventeenFont {
@@ -49,15 +49,22 @@ p {
 }
 
 #bg-3 {
-  background-color: #2f2f2f;
-  color: #8c8c8c;
+  background-color: #F0FFF0;
+  color: black;
   height: auto;
 }
 
 #bg-4 {
-  background-color: #1d1e22;
+  background-color: black;
   color: #8c8c8c;
   margin: auto;
+}
+
+#bg-5 {
+  background-color: rgb(241,241,241);
+  color: #8c8c8c;
+  width: 100%;
+  height: auto;
 }
 
 .container-fluid {
@@ -397,8 +404,9 @@ input:checked+.slider:before {
 }
 
 .project-info-table, .project-info-table tr, .project-info-table tr td {
-  border: 1px solid red;
+  border: 1px solid black;
   text-align: center;
+  color: black;
 }
 
 .project-info-header {
@@ -637,6 +645,52 @@ input:checked + .slider-paragraphUtilities:before {
   cursor: pointer;
 }
 
+.contactFormDiv {
+  width: 100%;
+  height: 90%;
+}
+
 .contact-form {
+  transform: translateX(50%);
   margin-top: 15px;
+  width: 50%;
+  height: 100%;
+  border: 1px solid black;
+  background-color: #FFFAFA;
+}
+
+.contact-form-rows {
+  transform: translateY(50%);
+}
+
+.contact-form input {
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0 0 3pt 2pt black;
+}
+
+.contact-form input:focus {
+  outline: none;
+  box-shadow: 0 0 3pt 2pt cyan;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.contact-msg {
+  height: 100%;
+}
+
+.contact-msg input {
+  width: 100%;
+  height:100%;
+}
+
+.contact-submit {
+  margin-left: 25.5%;
+  width: calc(100% - 43.5%);
+  background-color: #eddcd2;
+  font-weight: bold;
 }

@@ -3,7 +3,10 @@ const path = require('path');
 const url = require('url');
 const http = require('http');
 const app = express();
+require('dotenv').config();
 var router = express.Router();
+
+const CONTACT_RECIPIENT = process.env.RECIPIENT;
 
 var port = process.env.PORT || 8080;
 
@@ -20,6 +23,7 @@ app.use(express.static(__dirname + '/public'));
 const bodyParser = require('body-parser');
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+
 
 app.get('/', function (req, res) {
   res.render('pages/home');
@@ -68,7 +72,7 @@ app.get('/contact', function (req, res) {
 
 app.post('/contact', function(req, res) {
   console.log(req.body);
-  res.render()
+  // res.render()
 });
 
 

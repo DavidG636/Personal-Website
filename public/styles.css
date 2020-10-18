@@ -660,7 +660,9 @@ input:checked + .slider-paragraphUtilities:before {
 }
 
 .contact-form-rows {
-  transform: translateY(50%);
+  position: absolute;
+  width: 100%;
+  top: 27%;
 }
 
 .contactFormSubmissionInnerDiv, .contactFormProfanitySubmissionInnerDiv {
@@ -676,11 +678,6 @@ input:checked + .slider-paragraphUtilities:before {
 .contact-form input:focus {
   outline: none;
   box-shadow: 0 0 3pt 2pt cyan;
-  -webkit-transition: all 0.4s ease-in;
-  transition: all 0.4s ease-in;
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
 }
 
 .contact-msg {

@@ -13,33 +13,49 @@
 <div id="bg-1" style="height: 100%;" class="container-fluid text-center">
   <h1>Contact Me</h1>
   <div class="contactFormDiv">
-    <form autocomplete="off" method="post" action="/contact" class="contact-form">
-      <div class="contact-form-rows">
-        <div class="row">
-          <div class="col-md-4 offset-md-2 col-sm-6 col-xs-12">
-            <div class="form-group">
+    <div class="contactFormInnerDiv">
+      <form autocomplete="off" method="post" action="/contact" class="contact-form">
+        <div class="contact-form-rows">
+          <div class="row">
+            <div class="col-md-4 offset-md-2 col-sm-6 col-xs-12">
               <div class="form-group">
-                <input autocomplete="off" type="text" name="name" placeholder="Name" required><br>
+                <div class="form-group">
+                  <input autocomplete="off" type="text" name="name" placeholder="Name" required><br>
+                </div>
+                <div class="form-group">
+                  <input autocomplete="off" type="email" name="email" placeholder="Email Address" required><br>
+                </div>
+                <div class="form-group">
+                  <input autocomplete="off" type="text" name="subject" placeholder="Subject" required>
+                </div>
               </div>
-              <div class="form-group">
-                <input autocomplete="off" type="text" name="email" placeholder="Email Address" required><br>
-              </div>
-              <div class="form-group">
-                <input autocomplete="off" type="text" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="form-group contact-msg">
+                <input autocomplete="off" type="text" name="message" placeholder="Message" required>
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="form-group contact-msg">
-              <input autocomplete="off" type="text" name="message" placeholder="Message" required>
-            </div>
+          <div class="row">
+            <input autocomplete="off" class="contact-submit" type="submit" name="Submit" value="Submit">
           </div>
         </div>
-        <div class="row">
-          <input autocomplete="off" class="contact-submit" type="submit" name="Submit" value="Submit">
-        </div>
+      </form>
+    </div>
+    <div class="contactFormSubmissionDiv" style="display: none;">
+      <div class="contactFormSubmissionInnerDiv">
+        <h2>Form Submitted</h2>
+        <p>You will hear back in 3-4 businness days from David Gonzalez.</p>
+        <i style="font-size: 72pt; margin-top: 100px;" class="far fa-envelope"></i>
       </div>
-    </form>
+    </div>
+    <div class="contactFormProfanitySubmissionDiv" style="display: none;">
+      <div class="contactFormProfanitySubmissionInnerDiv">
+        <h2>Form Not Submitted</h2>
+        <p>Profanity was found in one of the form responses. Please do not input any profanity. To return to the original contact page, click the envelope icon in the footer below.</p>
+        <i style="font-size: 72pt; margin-top: 100px;" class="fas fa-exclamation-triangle"></i>
+      </div>
+    </div>
   </div>
 </div>
 

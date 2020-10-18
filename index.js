@@ -4,9 +4,23 @@ const url = require('url');
 const http = require('http');
 const app = express();
 require('dotenv').config();
+var firebase = require("firebase");
+var Filter = require('bad-words'), filter = new Filter();
 var router = express.Router();
 
-const CONTACT_RECIPIENT = process.env.RECIPIENT;
+var firebaseConfig = {
+    apiKey: process.env.APIKEY,
+    authDomain: process.env.FIREBASEAUTHDOMAIN,
+    databaseURL: process.env.FIREBASEDATABASEURL,
+    projectId: process.env.FIREBASEPROJECTID,
+    storageBucket: process.env.FIREBASESTORAGEBUCKET,
+    messagingSenderId: process.env.FIREBASEMESSAGINGSENDERID,
+    appId: process.env.FIREBASEAPPID,
+    measurementId: process.env.FIREBASEMEASUREMENTID
+};
+
+firebase.initializeApp(firebaseConfig);
+var contactFormDatabase = firebase.database().ref('/');;
 
 var port = process.env.PORT || 8080;
 
@@ -71,8 +85,22 @@ app.get('/contact', function (req, res) {
 })
 
 app.post('/contact', function(req, res) {
-  console.log(req.body);
-  // res.render()
+  var contactSubmission = req.body;
+  delete contactSubmission["Submit"];
+  let profanityFound= false;
+  Object.keys(contactSubmission).forEach(function(k){
+    if (filter.isProfane(contactSubmission[k])) {
+      profanityFound = true;
+    }
+  });
+
+  if (profanityFound) {
+    res.redirect('/contact?submitted=profanity');
+  }
+  else {
+    res.redirect('/contact?submitted=submitted');
+    contactFormDatabase.push(contactSubmission);
+  }
 });
 
 

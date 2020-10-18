@@ -650,7 +650,7 @@ input:checked + .slider-paragraphUtilities:before {
   height: 90%;
 }
 
-.contact-form {
+.contactFormInnerDiv, .contactFormSubmissionDiv, .contactFormProfanitySubmissionDiv {
   transform: translateX(50%);
   margin-top: 15px;
   width: 50%;
@@ -661,6 +661,10 @@ input:checked + .slider-paragraphUtilities:before {
 
 .contact-form-rows {
   transform: translateY(50%);
+}
+
+.contactFormSubmissionInnerDiv, .contactFormProfanitySubmissionInnerDiv {
+  margin-top: 50px;
 }
 
 .contact-form input {

@@ -1,6 +1,7 @@
 $(function() {
   var path = window.location.pathname;
   path = new String(path);
+  const urlParams = new URLSearchParams(window.location.search);
 
   $('.gitPicCase').unbind().click(function() {
     window.open('https://github.com/DavidG636/Case', '_blank');
@@ -63,11 +64,9 @@ $(function() {
   });
 
   $(".contactLink").hover(() => {
-    // Mouse Enter
     $(".contactLink").removeClass("fa-envelope");
     $(".contactLink").addClass("fa-envelope-open");
   }, () => {
-    // Mouse Leave
     $(".contactLink").removeClass("fa-envelope-open");
     $(".contactLink").addClass("fa-envelope");
   });
@@ -304,7 +303,6 @@ $(function() {
       }
     }
   } else if (path == "/Project-Info") {
-    const urlParams = new URLSearchParams(window.location.search);
     const myParam = urlParams.get('project');
     $(".project-name").html(myParam);
     $(".project-name").unbind().click(function() {
@@ -413,6 +411,18 @@ $(function() {
           </div>`
         );
       }
+    }
+  }
+  else if (path == "/contact") {
+    var mySubmissionParam = urlParams.get('submitted');
+
+    if (mySubmissionParam == "submitted") {
+      $(".contactFormInnerDiv").css("display", "none");
+      $(".contactFormSubmissionDiv").css("display", "block");
+    }
+    else if (mySubmissionParam == "profanity") {
+      $(".contactFormInnerDiv").css("display", "none");
+      $(".contactFormProfanitySubmissionDiv").css("display", "block");  
     }
   }
 

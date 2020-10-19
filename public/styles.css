@@ -665,6 +665,11 @@ input:checked + .slider-paragraphUtilities:before {
   top: 27%;
 }
 
+.contact-form-rows .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .contactFormSubmissionInnerDiv, .contactFormProfanitySubmissionInnerDiv {
   margin-top: 50px;
 }
@@ -673,6 +678,10 @@ input:checked + .slider-paragraphUtilities:before {
   border-radius: 25px;
   border: none;
   box-shadow: 0 0 3pt 2pt black;
+}
+
+.form-group input {
+  width: 100%;
 }
 
 .contact-form input:focus {

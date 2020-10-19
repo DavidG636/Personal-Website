@@ -479,7 +479,17 @@ input:checked+.slider:before {
 .case-parent, .paragraphInfoContainer-paragraphUtilities, .paragraphUtilitiesHomePageContainer-paragraphUtilities {
   background-image: url("looseleaf.jpg");
   background-repeat: round;
-  background-size: contain;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+.everything-case {
+  transform: translateY(50%);
+}
+
+.case-parent {
+  height: 100%;
 }
 
 .paraCont-paragraphUtilities {
@@ -488,8 +498,8 @@ input:checked+.slider:before {
 
 .para-paragraphUtilities {
   display: block;
-  width: 760px;
-  height: 380px;
+  width: 80%;
+  height: 50%;
   margin: auto;
   border: 5px solid #f46242;
   resize: none;
@@ -505,6 +515,7 @@ input:checked+.slider:before {
   display: block;
   background-color: #e7e7e7;
   border-color: #5c616d;
+  width: 60%;
 }
 
 #numOfSentences-paragraphUtilities {
@@ -515,6 +526,7 @@ input:checked+.slider:before {
 #otherInfo-paragraphUtilities {
   display: block;
   border: 5px solid #f46242;
+  margin-bottom: 15px;
 }
 
 .wgCol {
@@ -562,14 +574,16 @@ input:checked+.slider:before {
 }
 
 #text-paragraphUtilities {
-  width: 400px;
-  height: 200px;
+  margin-top: 15px;
+  width: 60%;
+  height: 30%;
   resize: none;
 }
 
-.submitText-paragraphUtilities {
-  width:400px;
+.case-parent .row .col div.text-center {
+  height: 100%;
 }
+
 
 .switch-paragraphUtilities {
   position: relative;
@@ -595,10 +609,9 @@ input:checked+.slider:before {
 .slider-paragraphUtilities:before {
   position: absolute;
   content: "a";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  height: 32px;
+  width: 32px;
+  left: 2px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
@@ -640,6 +653,8 @@ input:checked + .slider-paragraphUtilities:before {
 
 .pageGif-paragraphUtilities {
   border: 2px solid black;
+  width: 50%;
+  height: 50%;
 }
 
 .contactLink {

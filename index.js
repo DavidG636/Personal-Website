@@ -51,11 +51,11 @@ app.get('/projects', function (req, res) {
   res.render('pages/projects');
 })
 
-app.get('/hstat', function (req, res) {
+app.get('/WhoAmI/hstat', function (req, res) {
   res.render('pages/hstat');
 })
 
-app.get('/pace', function (req, res) {
+app.get('/WhoAmI/pace', function (req, res) {
   res.render('pages/pace');
 })
 

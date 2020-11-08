@@ -15,10 +15,11 @@ p {
 }
 
 #bg-1 {
+  display: inline-table;
   background-color: #F1E9DA;
   color: black;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .aboutMeText {
@@ -26,10 +27,11 @@ p {
 }
 
 #bg-2 {
+  display: inline-table;
   background-color: #546A7B;
   color: black;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 #bg-2 #accordion .card {
@@ -49,15 +51,17 @@ p {
 }
 
 #bg-3 {
+  display: inline-table;
   background-color: #F0FFF0;
   color: black;
-  height: auto;
+  height: 100%;
 }
 
 #bg-4 {
   background-color: black;
   color: #8c8c8c;
   margin: auto;
+  height: auto;
 }
 
 #bg-5 {

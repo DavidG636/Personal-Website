@@ -23,7 +23,8 @@ p {
 }
 
 .aboutMeText {
-  font-size: calc(100%);
+  margin-top: 15px;
+  font-size: 1.5vw;
 }
 
 #bg-2 {

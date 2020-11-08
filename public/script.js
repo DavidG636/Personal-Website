@@ -422,7 +422,11 @@ $(function() {
     }
     else if (mySubmissionParam == "profanity") {
       $(".contactFormInnerDiv").css("display", "none");
-      $(".contactFormProfanitySubmissionDiv").css("display", "block");  
+      $(".contactFormProfanitySubmissionDiv").css("display", "block");
+    }
+    else if (mySubmissionParam == "empty") {
+      $(".contactFormInnerDiv").css("display", "none");
+      $(".contactFormEmptySubmissionDiv").css("display", "block");  
     }
   }
 

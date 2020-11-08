@@ -666,7 +666,7 @@ input:checked + .slider-paragraphUtilities:before {
   height: 90%;
 }
 
-.contactFormInnerDiv, .contactFormSubmissionDiv, .contactFormProfanitySubmissionDiv {
+.contactFormInnerDiv, .contactFormSubmissionDiv, .contactFormProfanitySubmissionDiv, .contactFormEmptySubmissionDiv {
   transform: translateX(50%);
   margin-top: 15px;
   width: 50%;
@@ -686,7 +686,7 @@ input:checked + .slider-paragraphUtilities:before {
   margin-right: 0;
 }
 
-.contactFormSubmissionInnerDiv, .contactFormProfanitySubmissionInnerDiv {
+.contactFormSubmissionInnerDiv, .contactFormProfanitySubmissionInnerDiv, .contactFormEmptySubmissionInnerDiv {
   margin-top: 50px;
 }
 

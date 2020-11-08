@@ -88,14 +88,22 @@ app.post('/contact', function(req, res) {
   var contactSubmission = req.body;
   delete contactSubmission["Submit"];
   let profanityFound= false;
+  var letterRegExp = /[a-zA-Z]/g;
+  let emptyInput = false;
   Object.keys(contactSubmission).forEach(function(k){
     if (filter.isProfane(contactSubmission[k])) {
       profanityFound = true;
+    }
+    if(!letterRegExp.test(contactSubmission[k])) {
+      emptyInput = true;
     }
   });
 
   if (profanityFound) {
     res.redirect('/contact?submitted=profanity');
+  }
+  else if (emptyInput) {
+    res.redirect('/contact?submitted=empty');
   }
   else {
     res.redirect('/contact?submitted=submitted');

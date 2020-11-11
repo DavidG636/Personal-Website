@@ -725,3 +725,7 @@ input:checked + .slider-paragraphUtilities:before {
   background-color: #eddcd2;
   font-weight: bold;
 }
+
+.class-schedule {
+  margin-top: 10px;
+}

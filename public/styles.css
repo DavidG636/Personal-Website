@@ -96,7 +96,8 @@ p {
 }
 
 .profilePic {
-  border-radius: 100%;
+  border-radius: 25%;
+  border: 1px solid black;
   cursor: pointer;
   image-orientation: from-image;
   margin-bottom: 5px;

@@ -44,7 +44,15 @@ p {
   font-size: 1.5vw;
 }
 
+@media (max-width: 1200px) {
+    .aboutMeText{font-size: 2.0vw;}
+}
+
 @media (max-width: 992px) {
+    .aboutMeText{font-size: 2.5vw;}
+}
+
+@media (max-width: 768px) {
     .aboutMeText{font-size: 3.5vw;}
 }
 

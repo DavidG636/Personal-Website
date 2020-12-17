@@ -72,7 +72,7 @@ $(function() {
   });
 
   class Typewriter {
-    constructor(element, words, wait = 3000) {
+    constructor(element, words, wait = 500) {
       this.element = element;
       this.words = words;
       this.text = '';
@@ -426,7 +426,7 @@ $(function() {
     }
     else if (mySubmissionParam == "empty") {
       $(".contactFormInnerDiv").css("display", "none");
-      $(".contactFormEmptySubmissionDiv").css("display", "block");  
+      $(".contactFormEmptySubmissionDiv").css("display", "block");
     }
   }
 

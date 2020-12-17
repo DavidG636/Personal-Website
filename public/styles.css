@@ -40,7 +40,12 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  font-size: 30px;
   font-size: 1.5vw;
+}
+
+@media (max-width: 992px) {
+    .aboutMeText{font-size: 3.5vw;}
 }
 
 #bg-2 {

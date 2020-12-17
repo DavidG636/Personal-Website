@@ -108,6 +108,23 @@ p {
   letter-spacing: 5px;
 }
 
+#bg-pic #main-nav {
+  position: absolute;
+  background: transparent !important;
+  width: 100%;
+  top: 0;
+  left:0;
+  color: white !important;
+}
+
+#bg-pic #main-nav .nav-item:hover {
+  background-color: rgba(220,220,220,0.15);
+}
+
+#bg-pic #main-nav .nav-item a, #bg-pic #main-nav .profileName {
+  color: white !important;
+}
+
 .typewriter>.txt {
   border-right: 0.2rem solid #777;
 }

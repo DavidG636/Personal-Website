@@ -708,6 +708,7 @@ input:checked + .slider-paragraphUtilities:before {
 .contactFormDiv {
   width: 100%;
   height: 90%;
+  color: black;
 }
 
 .contactFormInnerDiv, .contactFormSubmissionDiv, .contactFormProfanitySubmissionDiv, .contactFormEmptySubmissionDiv {

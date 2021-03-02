@@ -711,7 +711,7 @@ input:checked + .slider-paragraphUtilities:before {
   color: black;
 }
 
-.contactFormInnerDiv, .contactFormSubmissionDiv, .contactFormProfanitySubmissionDiv, .contactFormEmptySubmissionDiv {
+.contactFormInnerDiv, .contactFormSubmissionDiv, .contactFormProfanitySubmissionDiv, .contactFormEmptySubmissionDiv, .contactFormBlacklistedEmailSubmissionDiv {
   transform: translateX(50%);
   margin-top: 15px;
   width: 50%;
@@ -731,7 +731,7 @@ input:checked + .slider-paragraphUtilities:before {
   margin-right: 0;
 }
 
-.contactFormSubmissionInnerDiv, .contactFormProfanitySubmissionInnerDiv, .contactFormEmptySubmissionInnerDiv {
+.contactFormSubmissionInnerDiv, .contactFormProfanitySubmissionInnerDiv, .contactFormEmptySubmissionInnerDiv, .contactFormBlacklistedEmailSubmissionInnerDiv {
   margin-top: 50px;
 }
 

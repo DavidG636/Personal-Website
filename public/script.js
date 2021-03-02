@@ -428,6 +428,10 @@ $(function() {
       $(".contactFormInnerDiv").css("display", "none");
       $(".contactFormEmptySubmissionDiv").css("display", "block");
     }
+    else if (mySubmissionParam == "blacklistedEmail") {
+      $(".contactFormInnerDiv").css("display", "none");
+      $(".contactFormBlacklistedEmailSubmissionDiv").css("display", "block");
+    }
   }
 
   $(".tooltip").on("click", ".moreInfoPic", function(e) {

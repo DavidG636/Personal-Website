@@ -87,9 +87,16 @@ app.get('/contact', function (req, res) {
 app.post('/contact', function(req, res) {
   var contactSubmission = req.body;
   delete contactSubmission["Submit"];
-  let profanityFound= false;
+  let profanityFound = false;
+  let blacklistedEmailFound = false;
   var letterRegExp = /[a-zA-Z]/g;
   let emptyInput = false;
+  const blacklistedEmails = process.env.REJECTEDEMAILS.split(", ");
+  for (let i = 0; i <= blacklistedEmails.length; i++) {
+    if (contactSubmission["email"] == blacklistedEmails[i]) {
+      blacklistedEmailFound = true;
+    }
+  }
   Object.keys(contactSubmission).forEach(function(k){
     if (filter.isProfane(contactSubmission[k])) {
       profanityFound = true;
@@ -104,6 +111,9 @@ app.post('/contact', function(req, res) {
   }
   else if (emptyInput) {
     res.redirect('/contact?submitted=empty');
+  }
+  if (blacklistedEmailFound) {
+    res.redirect('/contact?submitted=blacklistedEmail');
   }
   else {
     res.redirect('/contact?submitted=submitted');

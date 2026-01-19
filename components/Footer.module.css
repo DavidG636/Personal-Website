@@ -1,0 +1,40 @@
+.linkedInPic {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.gitPhotoLink,
+.otherAccountProfilePic {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.contactLink {
+  cursor: pointer;
+}
+
+.copyrightStatment {
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.linkInherit {
+  color: inherit;
+}
+
+.bg4 {
+  background-color: black;
+  color: #8c8c8c;
+  margin: auto;
+  height: auto;
+}

@@ -1,0 +1,72 @@
+.topSection {
+  margin-top: 100px;
+}
+
+.topSection textarea,
+.topSection textarea::-webkit-input-placeholder {
+  font-size: 20px;
+}
+
+.topSection textarea {
+  display: block;
+  width: 80%;
+  height: 50%;
+  margin: auto;
+  border: 5px solid #f46242;
+  resize: none;
+  background-color: #bc897e;
+}
+
+.utilButtons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.utilButton {
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+}
+
+.eraseBtn {
+  text-align: center;
+  background-color: #e7e7e7;
+  border-color: #5c616d;
+}
+
+.eraserImage {
+  width: 82px;
+  height: 82px;
+}
+
+.printBtn {
+  background-color: #e7e7e7;
+  border-color: #5c616d;
+}
+
+.numberOfSentences {
+  display: block;
+  text-align: center;
+}
+
+.bottomSection {
+  display: block;
+  border: 5px solid #f46242;
+  margin-bottom: 15px;
+}
+
+.lgCol {
+  background-color: lightgrey;
+  border: 1px solid #ddd;
+}
+
+.wgCol {
+  background-color: #b7a8a5;
+  border: 1px solid #ddd;
+}
+
+.prepCol {
+  background-color: #6a728c;
+}

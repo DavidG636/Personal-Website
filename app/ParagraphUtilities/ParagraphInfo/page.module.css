@@ -1,0 +1,12 @@
+.container {
+  background-image: url("/images/looseleaf.jpg");
+  background-repeat: round;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.pageHeader {
+  margin: auto;
+  text-align: center;
+}

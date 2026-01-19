@@ -1,0 +1,30 @@
+.mainNav {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+}
+
+.mainNav {
+  letter-spacing: 5px;
+  position: absolute;
+  background: transparent !important;
+  width: 100%;
+  top: 0;
+  left: 0;
+  color: white !important;
+}
+
+.mainNav .nav-item:hover {
+  background-color: rgba(220, 220, 220, 0.15);
+}
+
+.mainNav a,
+.mainNav .profileName {
+  color: white !important;
+}
+
+.profileName {
+}

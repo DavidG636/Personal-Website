@@ -1,4 +1,3 @@
-import * as admin from "firebase-admin";
 import Filter from "bad-words";
 
 interface ContactData {
@@ -8,29 +7,7 @@ interface ContactData {
   message: string;
 }
 
-let db: admin.database.Database | null = null;
 const filter = new Filter();
-
-function getDb() {
-  if (db) {
-    return db;
-  }
-
-  // Initialize Firebase Admin SDK on first use
-  if (!admin.apps.length) {
-    admin.initializeApp({
-      databaseURL: process.env.FIREBASE_DATABASE_URL,
-      credential: admin.credential.cert({
-        projectId: process.env.FIREBASE_PROJECT_ID,
-        clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-        privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
-      }),
-    });
-  }
-
-  db = admin.database();
-  return db;
-}
 
 export async function POST(request: Request) {
   try {
@@ -67,8 +44,25 @@ export async function POST(request: Request) {
     if (blacklistedEmailFound) {
       return Response.json({ error: "blacklistedEmail" }, { status: 400 });
     }
-    const database = getDb();
-    await database.ref("/").push(data);
+
+    // Use Firebase REST API to write to database
+    const databaseUrl = process.env.FIREBASE_DATABASE_URL;
+    if (!databaseUrl) {
+      throw new Error("FIREBASE_DATABASE_URL not configured");
+    }
+
+    const response = await fetch(`${databaseUrl}/.json`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Firebase API error: ${response.statusText}`);
+    }
+
     return Response.json({ success: true });
   } catch (error) {
     console.error("Contact form error:", error);

@@ -1,5 +1,3 @@
-import { initializeApp } from "firebase/app";
-import { getDatabase, ref, push } from "firebase/database";
 import Filter from "bad-words";
 
 interface ContactData {
@@ -9,18 +7,6 @@ interface ContactData {
   message: string;
 }
 
-const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  databaseURL: process.env.FIREBASE_DATABASE_URL,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
 const filter = new Filter();
 
 export async function POST(request: Request) {
@@ -58,7 +44,25 @@ export async function POST(request: Request) {
     if (blacklistedEmailFound) {
       return Response.json({ error: "blacklistedEmail" }, { status: 400 });
     }
-    await push(ref(db, "/"), data);
+
+    // Use Firebase REST API to write to database
+    const databaseUrl = process.env.FIREBASE_DATABASE_URL;
+    if (!databaseUrl) {
+      throw new Error("FIREBASE_DATABASE_URL not configured");
+    }
+
+    const response = await fetch(`${databaseUrl}/.json`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Firebase API error: ${response.statusText}`);
+    }
+
     return Response.json({ success: true });
   } catch (error) {
     console.error("Contact form error:", error);

@@ -1,5 +1,4 @@
-import { initializeApp } from "firebase/app";
-import { getDatabase, ref, push } from "firebase/database";
+import * as admin from "firebase-admin";
 import Filter from "bad-words";
 
 interface ContactData {
@@ -9,19 +8,29 @@ interface ContactData {
   message: string;
 }
 
-const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  databaseURL: process.env.FIREBASE_DATABASE_URL,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
+let db: admin.database.Database | null = null;
 const filter = new Filter();
+
+function getDb() {
+  if (db) {
+    return db;
+  }
+
+  // Initialize Firebase Admin SDK on first use
+  if (!admin.apps.length) {
+    admin.initializeApp({
+      databaseURL: process.env.FIREBASE_DATABASE_URL,
+      credential: admin.credential.cert({
+        projectId: process.env.FIREBASE_PROJECT_ID,
+        clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+        privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+      }),
+    });
+  }
+
+  db = admin.database();
+  return db;
+}
 
 export async function POST(request: Request) {
   try {
@@ -58,7 +67,8 @@ export async function POST(request: Request) {
     if (blacklistedEmailFound) {
       return Response.json({ error: "blacklistedEmail" }, { status: 400 });
     }
-    await push(ref(db, "/"), data);
+    const database = getDb();
+    await database.ref("/").push(data);
     return Response.json({ success: true });
   } catch (error) {
     console.error("Contact form error:", error);

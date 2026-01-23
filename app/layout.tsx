@@ -68,7 +68,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
       </head>
       <body
-        style={{ minWidth: "100vw", minHeight: "100%", width: "fit-content" }}
+        style={{
+          minWidth: "fit-content",
+          minHeight: "fit-content",
+        }}
       >
         <NavbarContainer />
         {children}

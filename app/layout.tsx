@@ -67,7 +67,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           crossOrigin="anonymous"
         />
       </head>
-      <body>
+      <body
+        style={{
+          minWidth: "fit-content",
+          minHeight: "fit-content",
+        }}
+      >
         <NavbarContainer />
         {children}
         <Footer />
